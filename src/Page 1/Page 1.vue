@@ -1,7 +1,7 @@
 <template>
     <div>
         <iv-visualisation :title="pageName" :vue_config="vue_config" :page_number="1">
-            <iv-pane position="left" format="overlay">
+            <iv-pane position="left" format="overlay" :width=30>
                 <iv-sidebar-content>
                     <iv-sidebar-section title="Mathematical Induction">
                         <h1>Reasoning mathematically about programs</h1>
@@ -19,15 +19,22 @@
                             and more importantly justify your answer mathematically?
                         </p>
 
+                    </iv-sidebar-section>
+                    <iv-sidebar-section title="The Game of Frogs">
+                        <h1>In The Game of Frogs, you swim or you die</h1>
+                        <p>
+                            Let there be n frogs lines up on a frictionless log. All the frogs start moving with a nonzero velocity.
+                            When two frogs collide they bounce off each other, and when they reach the end of the log they fall off
+                            into the water and are removed from the game.
+                        </p>
+                        <p>
+                            In this case, n=5 and the frogs are positioned as seen on the right. What do you think will happen as 
+                            time unfolds?
+                        </p>
                         
                     </iv-sidebar-section>
                 </iv-sidebar-content>
             </iv-pane>
-            <div class="iv-welcome-message">
-                <img src='@/assets/ImpVis-logo.png' alt="ImpVisLogo" height="50"/>
-                <h1> Welcome to Imperial Visualisations!</h1>
-                <p> Your page, Page 1 has succesfully been set up using the multiPage CLI template!</p>
-            </div>
         </iv-visualisation>
     </div>
 </template>
@@ -44,10 +51,4 @@ export default {
 }
 </script>
 <style>
-.iv-welcome-message{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
 </style>
